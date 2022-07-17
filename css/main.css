@@ -1,0 +1,192 @@
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0px -2px 1px #333;
+}
+header h1 {
+  width: 100%;
+  font-size: 5vh;
+  text-align: center;
+  color: #c92933;
+}
+
+.contentBox {
+  width: 100%;
+  height: 90vh;
+  min-height: calc(740px - 10vh);
+  padding: 5%;
+}
+.contentBox .contentInner {
+  width: 100%;
+  height: 100%;
+}
+.contentBox .contentInner .boothBoxWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 400px;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s linear;
+  transform-style: preserve-3d;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox.up {
+  transform: rotateX(25deg) translateY(-60%);
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox.down {
+  transform: rotateX(-25deg) translateY(60%);
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox.active {
+  opacity: 1;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothName {
+  width: 100%;
+  padding-bottom: 5%;
+  transition: 0.3s linear;
+  opacity: 0;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothName.active {
+  opacity: 1;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothName h2 {
+  font-size: 9vw;
+  text-shadow: 0px 0px 10px #c92933;
+  color: #fff;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  border-radius: 0 0 40px 0;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.13);
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 40px 0;
+  z-index: 3;
+  filter: saturate(1.5);
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox {
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+  width: 27%;
+  height: 90%;
+  z-index: 2;
+  transition: 0.3s all;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox.active {
+  right: -34%;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox .conceptList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox .conceptList .conceptItem {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox .conceptList .conceptItem .circle {
+  width: 15vw;
+  height: 15vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothMainImg .conceptListBox .conceptList .conceptItem .conceptItemName {
+  margin-top: 8%;
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothExplain {
+  margin-top: 5%;
+  width: 100%;
+  padding: 3%;
+  font-size: 4.5vw;
+  color: #fff;
+  letter-spacing: 1px;
+  transition: 0.3s linear;
+  opacity: 0;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothExplain.active {
+  opacity: 1;
+}
+.contentBox .contentInner .boothBoxWrapper .boothBox .boothExplain span {
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #ed2230;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .arrowWrapp,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .arrowWrapp {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .arrowWrapp .leftBar,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .arrowWrapp .rightBar,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .arrowWrapp .leftBar,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .arrowWrapp .rightBar {
+  width: 50%;
+  height: 3px;
+  background: #c92933;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .arrowName,
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .arrowName {
+  width: 100%;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 3.5vw;
+  text-align: center;
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .leftBar {
+  transform: rotate(-45deg) translateX(23%);
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .upArrow .rightBar {
+  transform: rotate(45deg) translateX(-23%);
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .leftBar {
+  transform: rotate(45deg) translateX(23%);
+}
+.contentBox .contentInner .boothBoxWrapper .boothSwitchBtn .downArrow .rightBar {
+  transform: rotate(-45deg) translateX(-23%);
+}
+
+/*# sourceMappingURL=main.css.map */
