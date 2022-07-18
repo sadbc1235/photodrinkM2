@@ -103,6 +103,4 @@ downBtn.addEventListener("click", () => {
     }, 300)
   }
 
-  
-
 })

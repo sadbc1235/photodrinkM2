@@ -117,7 +117,7 @@ header {
                 .circle {
                   width: 15vw;
                   height: 15vw;
-                  border: 1px solid #fff;
+                  // border: 1px solid #fff;
                   border-radius: 50%;
                 }
 
@@ -129,7 +129,36 @@ header {
                 }
 
               }
-            }
+
+              .neon {
+                border: 1px solid #c92933;
+                box-shadow: 0px 0px 2px #fff,
+                            0px 0px 10px #ed2230,
+                            inset 0px 0px 2px #fff,
+                            inset 0px 0px 10px #ed2230;
+              }
+
+              .modern {
+                background: linear-gradient(43deg, rgba(65,74,76,1) 40%, rgba(35,43,43,1) 60%);
+                box-shadow: 1px 1px 8px rgb(65,74,76);
+              }
+
+              .profile {
+                background: linear-gradient(43deg, rgba(237,237,237,1) 40%, rgb(185, 185, 185) 60%);
+                box-shadow: 1px 1px 8px rgb(237,237,237);
+              }
+
+              .art {
+                background: linear-gradient(43deg, rgba(255,48,0,1) 30%, rgba(255,163,0,1) 47%, rgba(255,249,65,1) 60%, rgba(118,255,65,1) 75%);
+                box-shadow: 1px 1px 8px rgba(138, 138, 138, 0.575);
+              }
+
+              .dynamic {
+                background: radial-gradient(circle, rgba(231,239,247,1) 5%, rgba(62,165,238,1) 23%, rgba(48,134,210,1) 47%);
+                box-shadow: 1px 1px 8px rgb(231,239,247);
+              }
+
+            } // conceptList
 
           }
 
